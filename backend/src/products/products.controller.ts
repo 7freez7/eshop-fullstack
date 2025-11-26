@@ -1,11 +1,8 @@
 // Soubor: src/products/products.controller.ts
-
-import { 
-  Controller, Get, Post, Body, Param, Put, Delete, UseGuards, ParseIntPipe 
-} from '@nestjs/common';
-import { ProductsService } from './products.service'; // Import služby
-
-import { JwtAuthGuard } from '../auth/guards/jwt-auth/jwt-auth.guard'; // Import pro ochranu
+import { Controller, Get, Post, Body, Param, Put, Delete, UseGuards, ParseIntPipe } from '@nestjs/common';
+import { ProductsService } from './products.service'; 
+import { JwtAuthGuard } from 'src/auth/guards/jwt-auth/jwt-auth.guard';
+import { Product } from '@prisma/client';
 
 @Controller('products')
 export class ProductsController {

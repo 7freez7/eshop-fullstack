@@ -1,20 +1,20 @@
+// Soubor: src/prisma/prisma.service.ts
+
 import { INestApplication, Injectable, OnModuleInit } from '@nestjs/common';
 import { PrismaClient } from '@prisma/client';
 
 @Injectable()
 export class PrismaService extends PrismaClient implements OnModuleInit {
-  
-  // Tato metoda se spustí hned po inicializaci modulu
   async onModuleInit() {
-    // Připojení k databázi
     await this.$connect();
   }
 
-  // Zajistí, že se spojení uzavře, když se aplikace vypne.
-  // Je to důležité pro čisté ukončení procesu.
+  // Zde se provádí oprava: Místo '$on' použijeme $use a ošetříme typování
   async enableShutdownHooks(app: INestApplication) {
-    this.$on('beforeExit' as any, async () => {
+    // Využijeme typování z Node.js, které je k dispozici
+    (this as any).$on('beforeExit', async () => {
       await app.close();
     });
   }
+  
 }

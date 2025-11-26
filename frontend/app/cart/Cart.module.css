@@ -1,0 +1,66 @@
+/* Soubor: frontend/app/cart/Cart.module.css */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.cartTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.cartTable th, .cartTable td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.cartTable th {
+    background-color: #f8f8f8;
+}
+
+.quantityInput {
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.removeButton {
+    background: none;
+    border: none;
+    color: #e74c3c;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.summary {
+    text-align: right;
+    padding-top: 20px;
+    border-top: 2px solid #333;
+}
+
+.checkoutButton {
+    padding: 15px 30px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.emptyCart {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.shopLink {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
