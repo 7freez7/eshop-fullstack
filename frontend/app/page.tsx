@@ -6,9 +6,9 @@ import { Product } from '@/types/product'; // Import centrálního typu
 
 // Next.js Server Component pro získání dat
 async function getProducts(): Promise<Product[]> {
-// NEXT.JS (na 3001) volá NESTJS (na 3000)
-  const res = await fetch('http://127.0.0.1:3000/products', { cache: 'no-store' });
-
+  // NEXT.JS (na 3001) volá NESTJS (na 3000)
+  const res = await fetch('http://127.0.0.1:3000/products', { cache: 'no-store' }); 
+  
   if (!res.ok) {
     console.error('Failed to fetch products:', await res.text());
     return []; 

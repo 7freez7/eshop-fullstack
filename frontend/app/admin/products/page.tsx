@@ -48,7 +48,7 @@ export default function AdminProductsPage() {
     setError(null);
 
     try {
-      const res = await fetch('http://localhost:3000/products', { headers });
+    const res = await fetch('http://127.0.0.1:3000/products', { headers });
 
       if (res.ok) {
         setProducts(await res.json());
@@ -78,9 +78,9 @@ export default function AdminProductsPage() {
     if (!headers) return;
 
     try {
-      const res = await fetch(`http://localhost:3000/products/${id}`, {
-        method: 'DELETE',
-        headers,
+      const res = await fetch(`http://127.0.0.1:3000/products/${id}`, { // Změna API adresy
+          method: 'DELETE',
+          headers,
       });
 
       if (res.ok) {
@@ -105,7 +105,7 @@ export default function AdminProductsPage() {
     if (!headers) throw new Error('Chyba autentizace.');
 
     const method = id ? 'PUT' : 'POST';
-    const url = id ? `http://localhost:3000/products/${id}` : 'http://localhost:3000/products';
+    const url = id ? `http://127.0.0.1:3000/products/${id}` : 'http://127.0.0.1:3000/products';
 
     const res = await fetch(url, {
       method: method,

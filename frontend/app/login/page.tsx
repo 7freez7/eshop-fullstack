@@ -18,8 +18,7 @@ export default function LoginPage() {
 
     try {
       // Volání NestJS API pro autentizaci na portu 3000 (Změněno na 127.0.0.1 pro stabilitu)
-      const response = await fetch('http://127.0.0.1:3000/auth/login', {
-        method: 'POST',
+    const response = await fetch('http://127.0.0.1:3000/auth/login', {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
       });
