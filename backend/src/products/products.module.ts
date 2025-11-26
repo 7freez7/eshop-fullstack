@@ -10,4 +10,3 @@ import { PrismaModule } from '../prisma/prisma.module'; // Importujeme Prisma
 })
 export class ProductsModule {}
 
-// Soubor: src/products/products.service.ts
