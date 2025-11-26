@@ -1,0 +1,86 @@
+/* Soubor: frontend/app/admin/products/Products.module.css */
+
+.container {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.addButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background-color: #28a745; /* Zelená barva */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 25px;
+    transition: background-color 0.2s;
+}
+
+.addButton:hover {
+    background-color: #1f8b3c;
+}
+
+.productTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed; /* Zajišťuje, že se tabulka nezvětšuje nekontrolovaně */
+}
+
+.productTable th, .productTable td {
+    border: 1px solid #eee;
+    padding: 12px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.productTable th {
+    background-color: #f8f9fa;
+    color: #555;
+    font-weight: 600;
+}
+
+.productTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.productTable td:nth-child(1) { width: 5%; }  /* ID */
+.productTable td:nth-child(2) { width: 45%; } /* Název */
+.productTable td:nth-child(3) { width: 20%; } /* Cena */
+.productTable td:nth-child(4) { width: 30%; text-align: center; } /* Akce */
+
+
+.editButton, .deleteButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.editButton {
+    color: #007bff; /* Modrá */
+}
+
+.editButton:hover {
+    background-color: #e0f0ff;
+}
+
+.deleteButton {
+    color: #dc3545; /* Červená */
+}
+
+.deleteButton:hover {
+    background-color: #fae0e3;
+}
